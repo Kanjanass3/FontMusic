@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <title>Music</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <h1>Thai Music</h1>
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Name Song</th>
+            <th>Artist</th>
+        </tr>
+        <% for(var i=0; i < thaimusics.length; i++)  { %>
+        <tr>
+            <td><%= thaimusics[i].id %></td>
+            <td><%= thaimusics[i].song %></td>
+            <td><%= thaimusics[i].artist %></td>
+            <td>
+                <a href="/showthaimusics/<%= thaimusics[i].id %>">View</a>
+                <a href="/editthaimusics/<%= thaimusics[i].id %>">Edit</a>
+                <a href="/deletethaimusics/<%= thaimusics[i].id %>">Delete</a>
+            </td>
+        </tr>
+        <% } %>
+    </table>
+    <a href="/createthai">Create New Thai Music</a>
+
+    <h1>Korea Music</h1>
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Name Song</th>
+            <th>Artist</th>
+        </tr>
+        <% for(var i=0; i < koreamusics.length; i++)  { %>
+        <tr>
+            <td><%= koreamusics[i].id %></td>
+            <td><%= koreamusics[i].song %></td>
+            <td><%= koreamusics[i].artist %></td>
+            <td>
+                <a href="/showkoreamusics/<%= koreamusics[i].id %>">View</a>
+                <a href="/editkoreamusics/<%= koreamusics[i].id %>">Edit</a>
+                <a href="/deletekoreamusics/<%= koreamusics[i].id %>">Delete</a>
+            </td>
+        </tr>
+        <% } %>
+    </table>
+    <a href="/createkorea">Create New Korea Music</a>
+
+    <h1>English Music</h1>
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Name Song</th>
+            <th>Artist</th>
+        </tr>
+        <% for(var i=0; i < englishmusics.length; i++)  { %>
+        <tr>
+            <td><%= englishmusics[i].id %></td>
+            <td><%= englishmusics[i].song %></td>
+            <td><%= englishmusics[i].artist %></td>
+            <td>
+                <a href="/showenglishmusics/<%= englishmusics[i].id %>">View</a>
+                <a href="/editenglishmusics/<%= englishmusics[i].id %>">Edit</a>
+                <a href="/deleteenglishmusics/<%= englishmusics[i].id %>">Delete</a>
+            </td>
+        </tr>
+        <% } %>
+    </table>
+    <a href="/createenglish">Create New English Music</a>

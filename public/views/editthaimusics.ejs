@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Thai Music</title>
+</head>
+<body>
+    <h1>Edit Thai Music</h1>
+    <form method="post" action="/editthaimusics/<%= thaimusics.id%>">
+        <label for="song">Namesong: </label>
+        <input type="text" id="song" name="song" value="<%= thaimusics.song %>">
+        <br>
+        <label for="artist">Artist:</label>
+        <input type="text" id="artist" name="artist" value="<%= thaimusics.artist %>">
+        <br>
+        <input type="submit" value="Update">
+    </form>
+<a href="/Viewthaimusics/<%= thaimusics.id %>">View</a>
+<a href="/Deletethaimusics/<%= thaimusics.id %>">Delete</a>
+<a href="/">Back to List</a>
+</body>
+</html>

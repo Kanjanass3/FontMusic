@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <title>Music</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <h1>View Korea Music</h1>
+    <table class="book-table">
+        <tr>
+            <th>Id</th>
+            <th>NameSong</th>
+            <th>Artist</th>
+        </tr>
+        <tr>
+            <td><%= koreamusics.id %></td>
+            <td><%= koreamusics.song %></td>
+            <td><%= koreamusics.artist %></td>
+        </tr>
+    </table>
+    <div class="link-center"> 
+    <a href="/Editkoreamusics/<%= koreamusics.id %>">Edit</a>                   
+    <a href="/Deletekoreamusics/<%= koreamusics.id %>">Delete</a>
+    <a href="/">Back to List</a>
+    </div>
+    </body>
+</html>

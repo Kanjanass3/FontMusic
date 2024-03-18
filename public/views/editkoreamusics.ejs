@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Korea Music</title>
+</head>
+<body>
+    <h1>Edit Korea Music</h1>
+    <form method="post" action="/editkoreamusics/<%= koreamusics.id%>">
+        <label for="song">Namesong: </label>
+        <input type="text" id="song" name="song" value="<%= koreamusics.song %>">
+        <br>
+        <label for="artist">Artist:</label>
+        <input type="text" id="artist" name="artist" value="<%= koreamusics.artist %>">
+        <br>
+        <input type="submit" value="Update">
+    </form>
+<a href="/Viewkoreamusics/<%= koreamusics.id %>">View</a>
+<a href="/Deletekoreamusics/<%= koreamusics.id %>">Delete</a>
+<a href="/">Back to List</a>
+</body>
+</html>
